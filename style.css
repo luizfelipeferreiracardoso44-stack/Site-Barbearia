@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 6%;
+    background: rgba( 10, 10, 10, 0.90);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c9a227;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background:#c9a227;
+    bottom: -6px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    background: #c9a227;
+    color: #111;
+    padding: 13px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.botao.hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 8% 80px;
+
+    background: 
+    linear-gradient(90deg, rgba(0,0,0,.85)rgba(0,0,0,.35)),
+    url(imagens/barbearia.jpg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-conteudo {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 0.95;
+    margin: 20px 0;
+    letter-spacing: -2px;
+}
+
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+servicos-container {
+    display: flex;
+    gap: 25px;
+}
+
+.servico {
+    flex: 1;
+    padding: 30px;
+    background: #1c1c1c;
+    border: 1px solid #333;
+}
+
+.servico h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.servico strong {
+    display: block;
+    margin-top: 20px;
+    color: #c9a227;
+    font-size: 24px;
+}
+
+footer {
+    background: #080808;
+    padding: 50px 8%;
+}
+
+#servicos {
+    background: #111;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-secao p {
+    color: #c9a227;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.titulo-secao h2 {
+    margin-bottom: 0;
+}
+
+servicos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.servico {
+    background: #181818;
+    padding: 40px 30px;
+    border: 1px solid #2d2d2d;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.servico:hover {
+    transform: translateY(-8px);
+    border-color: #c9a227;
+}
+
+.servico.destaque {
+    border-color: #c9a227;
+    transform: translateY(-10px);
+}
+
+.servico.destaque:hover {
+    transform: translateY(-15px);
+}
+
+.icone {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.servico h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.servico p {
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.preco {
+    color: #c9a227;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.link-servico {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link-servico:hover {
+    color: #c9a227;
+}
+
+@media (max-width 800px) {
+    .servico-container {
+        grid-template-columns: 1fr;
+    }
+
+    .servico.destaque {
+        transform: none;
+    }
+
+    .servico.destaque:hover {
+        transform: translateY(-8px);
+    }
+}
